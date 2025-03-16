@@ -18,7 +18,7 @@ on:
     - cron: 0 2 * * 5
 
 env:
-  REPO_URL: https://github.com/coolsnowwolf/lede
+  REPO_URL: https://github.com/nisemoe/lede_surface.git
   REPO_BRANCH: master
   FEEDS_CONF: feeds_config/lede23.feeds.conf.default
   CONFIG_FILE: config/lede_config/2305_x64_all.config
@@ -40,7 +40,7 @@ jobs:
   CheckRepo:
     runs-on: ubuntu-22.04
     env:
-      REPO_URL_Lede: https://github.com/coolsnowwolf/lede
+      REPO_URL_Lede: https://github.com/nisemoe/lede_surface.git
       REPO_BRANCH_Lede: master
       REPO_PATH_Lede : "2305_x64_all"
     outputs:
