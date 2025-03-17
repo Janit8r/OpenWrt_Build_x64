@@ -169,7 +169,33 @@ jobs:
         [ -e $FEEDS_CONF ] && mv $FEEDS_CONF openwrt/feeds.conf.default
         chmod +x $DIY_P1_SH
 
-        wget -P target/linux/x86/patches-6.6/ https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/6.6/{0001-surface3-oemb,0002-mwifiex,0003-ath10k,0004-ipts,0005-ithc,0006-surface-sam,0007-surface-sam-over-hid,0008-surface-button,0009-surface-typecover,0010-surface-shutdown,0011-surface-gpe,0012-cameras,0013-amd-gpio,0014-rtc}.patch
+        curl -o openwrt/target/linux/x86/patches-6.6/0001-surface3-oemb.patch https://raw.githubusercontent.com/linux-surface/linux-surface/refs/heads/master/patches/6.6/0001-surface3-oemb.patch
+
+        curl -o openwrt/target/linux/x86/patches-6.6/0002-mwifiex.patch https://raw.githubusercontent.com/linux-surface/linux-surface/refs/heads/master/patches/6.6/0002-mwifiex.patch
+
+        curl -o openwrt/target/linux/x86/patches-6.6/0003-ath10k.ptach https://raw.githubusercontent.com/linux-surface/linux-surface/refs/heads/master/patches/6.6/0003-ath10k.patch
+
+        curl -o openwrt/target/linux/x86/patches-6.6/0004-ipts.patch https://raw.githubusercontent.com/linux-surface/linux-surface/refs/heads/master/patches/6.6/0004-ipts.patch
+
+        curl -o openwrt/target/linux/x86/patches-6.6/0005-ithc.patch https://raw.githubusercontent.com/linux-surface/linux-surface/refs/heads/master/patches/6.6/0005-ithc.patch
+
+        curl -o openwrt/target/linux/x86/patches-6.6/0006-surface-sam.patch https://raw.githubusercontent.com/linux-surface/linux-surface/refs/heads/master/patches/6.6/0006-surface-sam.patch
+
+        curl -o openwrt/target/linux/x86/patches-6.6/0007-surface-sam-over-hid.patch https://raw.githubusercontent.com/linux-surface/linux-surface/refs/heads/master/patches/6.6/0007-surface-sam-over-hid.patch
+
+        curl -o openwrt/target/linux/x86/patches-6.6/0008-surface-button.patch https://raw.githubusercontent.com/linux-surface/linux-surface/refs/heads/master/patches/6.6/0008-surface-button.patch
+
+        curl -o openwrt/target/linux/x86/patches-6.6/0009-surface-typecover.patch https://raw.githubusercontent.com/linux-surface/linux-surface/refs/heads/master/patches/6.6/0009-surface-typecover.patch
+
+        curl -o openwrt/target/linux/x86/patches-6.6/0010-surface-shutdown.patch https://raw.githubusercontent.com/linux-surface/linux-surface/refs/heads/master/patches/6.6/0010-surface-shutdown.patch
+
+        curl -o openwrt/target/linux/x86/patches-6.6/0011-surface-gpe.patch https://raw.githubusercontent.com/linux-surface/linux-surface/refs/heads/master/patches/6.6/0011-surface-gpe.patch
+
+        curl -o openwrt/target/linux/x86/patches-6.6/0012-cameras.patch https://raw.githubusercontent.com/linux-surface/linux-surface/refs/heads/master/patches/6.6/0012-cameras.patch
+
+        curl -o openwrt/target/linux/x86/patches-6.6/0013-amd-gpio.patch https://raw.githubusercontent.com/linux-surface/linux-surface/refs/heads/master/patches/6.6/0013-amd-gpio.patch
+
+        curl -o openwrt/target/linux/x86/patches-6.6/0014-rtc.patch https://raw.githubusercontent.com/linux-surface/linux-surface/refs/heads/master/patches/6.6/0014-rtc.patch
         
         ls -al openwrt/target/linux/x86/patches-6.6/
         cd openwrt
