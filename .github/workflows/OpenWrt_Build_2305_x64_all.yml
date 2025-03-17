@@ -168,9 +168,7 @@ jobs:
       run: |
         [ -e $FEEDS_CONF ] && mv $FEEDS_CONF openwrt/feeds.conf.default
         chmod +x $DIY_P1_SH
-        curl -o openwrt/target/linux/x86/patches-6.6/0001-surface3-oemb.patch https://raw.githubusercontent.com/linux-surface/linux-surface/refs/heads/master/patches/6.6/0001-surface3-oemb.patch
-        curl -o openwrt/target/linux/x86/patches-6.6/0009-surface-typecover.patch https://raw.githubusercontent.com/linux-surface/linux-surface/refs/heads/master/patches/6.6/0009-surface-typecover.patch
-        curl -o openwrt/target/linux/x86/patches-6.6/0014-rtc.patch https://raw.githubusercontent.com/linux-surface/linux-surface/refs/heads/master/patches/6.6/0014-rtc.patch
+        wget -P target/linux/x86/patches-6.6/ https://raw.githubusercontent.com/linux-surface/linux-surface/master/patches/6.6/{0001,0002,0003,0004,0005,0006,0007,0008,0009,0010,0011,0012,0013,0014}-*.patch
         ls -al openwrt/target/linux/x86/patches-6.6/
         cd openwrt
         $GITHUB_WORKSPACE/$DIY_P1_SH
