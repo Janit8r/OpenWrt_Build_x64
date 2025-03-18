@@ -185,6 +185,7 @@ jobs:
           #curl -o openwrt/target/linux/x86/patches-6.6/0013-amd-gpio.patch https://raw.githubusercontent.com/linux-surface/linux-surface/refs/heads/master/patches/6.6/0013-amd-gpio.patch
           #curl -o openwrt/target/linux/x86/patches-6.6/0014-rtc.patch https://raw.githubusercontent.com/linux-surface/linux-surface/refs/heads/master/patches/6.6/0014-rtc.patch
           ls -al openwrt/target/linux/x86
+          chmod +x $DIY_P1_SH
           cd openwrt
           $GITHUB_WORKSPACE/$DIY_P1_SH
 
