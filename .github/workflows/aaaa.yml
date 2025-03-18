@@ -161,7 +161,7 @@ jobs:
         run: |
           echo "开始整合 linux-surface 内核源码..."
           # 克隆 linux-surface 内核（此处可根据需要指定分支或 tag）
-          git clone --depth 1 https://github.com/linux-surface/kernel.git linux-surface-kernel
+          git clone --branch v6.6-surface https://github.com/linux-surface/kernel.git linux-surface-kernel
           # 替换 OpenWrt 目录下默认的内核源码（此处以 x86 目标为例，请根据实际情况调整目录）
           rm -rf target/linux/x86
           cp -rf linux-surface-kernel target/linux/x86
